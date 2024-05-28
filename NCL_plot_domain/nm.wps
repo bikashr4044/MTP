@@ -1,0 +1,43 @@
+&share
+ wrf_core             = 'ARW'
+ max_dom              = 5
+ start_date           = '2024-04-01_03:00:00', '2024-04-01_03:00:00', '2024-04-01_03:00:00', '2024-04-01_03:00:00', '2024-04-01_03:00:00'
+ end_date             = '2024-04-01_18:00:00', '2024-04-01_18:00:00', '2024-04-01_18:00:00', '2024-04-01_18:00:00', '2024-04-01_18:00:00'
+ interval_seconds     = 21600
+ io_form_geogrid      = 2
+ debug_level          = 0
+/
+
+&geogrid
+ parent_id            = 1, 1, 2, 3, 4
+ parent_grid_ratio    = 1, 3, 3, 3, 3
+ i_parent_start       = 1, 125, 6485, 5343, 1786
+ j_parent_start       = 1, 102, 5636, 2402, 2751
+ e_we                 = 3573, 10072, 10165, 6478, 7804
+ e_sn                 = 3707, 10624, 9547, 7909, 9277
+ geog_data_res        = 'default', 'default', 'default', 'default', 'default'
+ dx                   = 1000
+ dy                   = 1000
+ map_proj             = 'lambert'
+ ref_lat              = 20.282
+ ref_lon              = 81.782
+ truelat1             = 20.282
+ truelat2             = 20.282
+ pole_lat             = 90
+ pole_lon             = 0
+ stand_lon            = 81.782
+ geog_data_path       = '/home/bikash/wrf/Build_WRF/WPS_GEOG'
+ opt_geogrid_tbl_path = './geogrid/'
+/
+
+&ungrib
+ out_format           = 'WPS'
+ prefix               = 'FILE'
+/
+
+&metgrid
+ fg_name              = 'FILE'
+ io_form_metgrid      = 2
+ opt_metgrid_tbl_path = './metgrid'
+/
+
